@@ -538,7 +538,7 @@ async def spam(e):
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.fuk"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.fuk"))
 async def spam(e):
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = Fuk\n\nCommand:\n\n.fuk <count> <Username of User>\n\n.fuk <count> <reply to a User>\n\nCount must be a integer."
+    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝐅𝐮𝐤\n\nCommand:\n\n.fuk <count> <Username of User>\n\n.fuk <count> <reply to a User>\n\nCount must be a integer."
     if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
@@ -612,7 +612,7 @@ async def _(event):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.hardcore"))
 async def _(e):
     global que
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱\n\nCommand:\n\n.hardcore <Username of User>\n\n.hardcore <reply to a User>"
+    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝐇𝐚𝐫𝐝𝐜𝐨𝐫𝐞\n\nCommand:\n\n.hardcore <Username of User>\n\n.hardcore <reply to a User>"
     if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
@@ -654,7 +654,7 @@ async def _(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.dhardcore"))
 async def _(e):
     global que
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗗𝗲𝗮𝗰𝘁𝗶𝘃𝗮𝘁𝗲 𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱\n\nCommand:\n\n.dhardcore <Username of User>\n\n.dhardcore <reply to a User>"
+    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗗𝗲𝗮𝗰𝘁𝗶𝘃𝗮𝘁𝗲 𝐇𝐚𝐫𝐝𝐜𝐨𝐫𝐞\n\nCommand:\n\n.dhardcore <Username of User>\n\n.dhardcore <reply to a User>"
     if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
@@ -684,3 +684,195 @@ async def _(e):
             await e.reply(text, parse_mode=None, link_preview=None)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
+            
+            
+
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.bot"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.bot"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.bot"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.bot"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.bot"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.bot"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.bot"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.bot"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.bot"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.bot"))
+async def ping(e):
+    if e.sender_id in SMEX_USERS:
+        start = datetime.now()
+        text = "Wait!"
+        event = await e.reply(text, parse_mode=None, link_preview=None)
+        end = datetime.now()
+        ms = (end - start).microseconds / 1000
+        await event.edit(
+            f"‌‌‎ __  __ _     ___  \n|  \/  | |   / _ \ \n| |\/| | |  | | | |\n| |  | | |__| |_| |\n|_|  |_|_____\___/!\n\n`{ms}` 𝗺𝘀\n\n 𝑴𝑳𝑶 𝑺𝑷𝑨𝑴𝑩𝑶𝑻 𝑶𝑵 𝑭𝑰𝑹𝑬 🔥"
+        )
+        
+        
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.reboot"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.reboot"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.reboot"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.reboot"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.reboot"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.reboot"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.reboot"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.reboot"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.reboot"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.reboot"))
+async def restart(e):
+    if e.sender_id in SMEX_USERS:
+        text = "𝑹𝒆𝒃𝒐𝒐𝒕𝒆𝒅\n\nPlease wait till it reboots..."
+        await e.reply(text, parse_mode=None, link_preview=None)
+        try:
+            await idk.disconnect()
+        except Exception:
+            pass
+        try:
+            await ydk.disconnect()
+        except Exception:
+            pass
+        try:
+            await wdk.disconnect()
+        except Exception:
+            pass
+        try:
+            await hdk.disconnect()
+        except Exception:
+            pass
+        try:
+            await sdk.disconnect()
+        except Exception:
+            pass
+        try:
+            await adk.disconnect()
+        except Exception:
+            pass
+        try:
+            await bdk.disconnect()
+        except Exception:
+            pass
+        try:
+            await cdk.disconnect()
+        except Exception:
+            pass
+        try:
+            await ddk.disconnect()
+        except Exception:
+            pass
+        try:
+            await edk.disconnect()
+        except Exception:
+            pass
+        os.execl(sys.executable, sys.executable, *sys.argv)
+        quit()
+
+
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+async def help(e):
+    if e.sender_id in SMEX_USERS:
+        text = "𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀\n\n𝙐𝙩𝙞𝙡𝙨 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n.bot\n.reboot\n\n𝙐𝙨𝙚𝙧𝙗𝙤𝙩 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n.bio\n.join\n.pjoin\n.bleave\n\n𝙎𝙥𝙖𝙢 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n.bspam\n.delaybspam\n.bigbspam\n.fuk\n.hardcore\n.dhardcore\n\n\nFor more help regarding usage of plugins type plugins name"
+        await e.reply(text, parse_mode=None, link_preview=None)
+        
+
+text = """
+ ███╗░░░███╗██╗░░░░░░█████╗░
+████╗░████║██║░░░░░██╔══██╗
+██╔████╔██║██║░░░░░██║░░██║
+██║╚██╔╝██║██║░░░░░██║░░██║
+██║░╚═╝░██║███████╗╚█████╔╝
+╚═╝░░░░░╚═╝╚══════╝░╚════╝░"""
+
+print(text)
+print("")
+print("BHOSHDIKO CHAL GYA H BOT AB JAKE SPAM ME GAAND MARAO KAHI.........")
+if len(sys.argv) not in (1, 3, 4):
+    try:
+        idk.disconnect()
+    except Exception:
+        pass
+    try:
+        ydk.disconnect()
+    except Exception:
+        pass
+    try:
+        wdk.disconnect()
+    except Exception:
+        pass
+    try:
+        hdk.disconnect()
+    except Exception:
+        pass
+    try:
+        sdk.disconnect()
+    except Exception:
+        pass
+    try:
+        adk.disconnect()
+    except Exception:
+        pass
+    try:
+        bdk.disconnect()
+    except Exception:
+        pass
+    try:
+        cdk.disconnect()
+    except Exception:
+        pass
+    try:
+        edk.disconnect()
+    except Exception:
+        pass
+    try:
+        ddk.disconnect()
+    except Exception:
+        pass
+else:
+    try:
+        idk.run_until_disconnected()
+    except Exception:
+        pass
+    try:
+        ydk.run_until_disconnected()
+    except Exception:
+        pass
+    try:
+        wdk.run_until_disconnected()
+    except Exception:
+        pass
+    try:
+        hdk.run_until_disconnected()
+    except Exception:
+        pass
+    try:
+        sdk.run_until_disconnected()
+    except Exception:
+        pass
+    try:
+        adk.run_until_disconnected()
+    except Exception:
+        pass
+    try:
+        bdk.run_until_disconnected()
+    except Exception:
+        pass
+    try:
+        cdk.run_until_disconnected()
+    except Exception:
+        pass
+    try:
+        edk.run_until_disconnected()
+    except Exception:
+        pass
+    try:
+        ddk.run_until_disconnected()
+    except Exception:
+        pass
