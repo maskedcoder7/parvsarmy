@@ -573,3 +573,114 @@ async def spam(e):
                     await asyncio.sleep(0.3)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
+            
+            
+@idk.on(events.NewMessage(incoming=True))
+@ydk.on(events.NewMessage(incoming=True))
+@wdk.on(events.NewMessage(incoming=True))
+@hdk.on(events.NewMessage(incoming=True))
+@sdk.on(events.NewMessage(incoming=True))
+@adk.on(events.NewMessage(incoming=True))
+@bdk.on(events.NewMessage(incoming=True))
+@cdk.on(events.NewMessage(incoming=True))
+@edk.on(events.NewMessage(incoming=True))
+@ddk.on(events.NewMessage(incoming=True))
+async def _(event):
+    global que
+    queue = que.get(event.sender_id)
+    if not queue:
+        return
+    async with event.client.action(event.chat_id, "typing"):
+        await asyncio.sleep(0.3)
+    async with event.client.action(event.chat_id, "typing"):
+        await event.client.send_message(
+            entity=event.chat_id,
+            message="""{}""".format(random.choice(HFUK)),
+            reply_to=event.message.id,
+        )
+        
+        
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.hardcore"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.hardcore"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.hardcore"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.hardcore"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.hardcore"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.hardcore"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.hardcore"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.hardcore"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.hardcore"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.hardcore"))
+async def _(e):
+    global que
+    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱\n\nCommand:\n\n.hardcore <Username of User>\n\n.hardcore <reply to a User>"
+    if e.sender_id in SMEX_USERS:
+        if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
+            return await e.reply(usage, parse_mode=None, link_preview=None)
+        MLO = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        await e.get_reply_message()
+        if len(e.text) > 11:
+            message = str(MLO[0])
+            a = await e.client.get_entity(message)
+            g = a.id
+            que[g] = []
+            qeue = que.get(g)
+            appendable = [g]
+            qeue.append(appendable)
+            text = "Activated Hardcore Mode"
+            await e.reply(text, parse_mode=None, link_preview=None)
+        elif e.reply_to_msg_id:
+            a = await e.get_reply_message()
+            b = await e.client.get_entity(a.sender_id)
+            g = b.id
+            que[g] = []
+            qeue = que.get(g)
+            appendable = [g]
+            qeue.append(appendable)
+            text = "Activated Hardcore Mode"
+            await e.reply(text, parse_mode=None, link_preview=None)
+        else:
+            await e.reply(usage, parse_mode=None, link_preview=None)
+            
+            
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.dhardcore"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.dhardcore"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.dhardcore"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.dhardcore"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.dhardcore"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.dhardcore"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.dhardcore"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.dhardcore"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.dhardcore"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.dhardcore"))
+async def _(e):
+    global que
+    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗗𝗲𝗮𝗰𝘁𝗶𝘃𝗮𝘁𝗲 𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱\n\nCommand:\n\n.dhardcore <Username of User>\n\n.dhardcore <reply to a User>"
+    if e.sender_id in SMEX_USERS:
+        if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
+            return await e.reply(usage, parse_mode=None, link_preview=None)
+        MLO = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        await e.get_reply_message()
+        if len(e.text) > 12:
+            message = str(MLO[0])
+            a = await e.client.get_entity(message)
+            g = a.id
+            try:
+                queue = que.get(g)
+                queue.pop(0)
+            except Exception:
+                pass
+            text = "De-Activated Hardcore Mode"
+            await e.reply(text, parse_mode=None, link_preview=None)
+        elif e.reply_to_msg_id:
+            a = await e.get_reply_message()
+            b = await e.client.get_entity(a.sender_id)
+            g = b.id
+            try:
+                queue = que.get(g)
+                queue.pop(0)
+            except Exception:
+                pass
+            text = "De-Activated Hardcore Mode"
+            await e.reply(text, parse_mode=None, link_preview=None)
+        else:
+            await e.reply(usage, parse_mode=None, link_preview=None)
