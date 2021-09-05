@@ -6,15 +6,11 @@ from datetime import datetime
 
 import telethon.utils
 from telethon import TelegramClient, events
-from telethon.errors import (
-    ChannelInvalidError,
-    ChannelPrivateError,
-    ChannelPublicGroupNaError,
-)
 from telethon.sessions import StringSession
 from telethon.tl import functions, types
-from telethon.tl.functions.channels import GetFullChannelRequest, LeaveChannelRequest
-from telethon.tl.functions.messages import GetFullChatRequest, ImportChatInviteRequest
+from telethon.tl.functions.channels import LeaveChannelRequest
+from telethon.tl.functions.messages import ImportChatInviteRequest
+from Utils import FUK, HFUK
 
 from Config import (
     API_HASH,
@@ -31,7 +27,6 @@ from Config import (
     STRING10,
     SUDO,
 )
-from Utils import FUK, HFUK
 
 a = API_ID
 b = API_HASH
@@ -288,7 +283,7 @@ async def start_MLO():
         except Exception:
             pass
 
-          
+
 loop = asyncio.get_event_loop()
 loop.run_until_complete(start_MLO())
 
@@ -307,8 +302,8 @@ async def gifspam(e, smex):
         )
     except Exception:
         pass
-      
-      
+
+
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
 @wdk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
@@ -334,7 +329,7 @@ async def _(e):
                 await event.edit(str(e))
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
-            
+
 
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
@@ -361,8 +356,8 @@ async def _(e):
                 await event.edit(str(e))
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
-            
-            
+
+
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.bleave"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.bleave"))
 @wdk.on(events.NewMessage(incoming=True, pattern=r"\.bleave"))
@@ -389,8 +384,8 @@ async def _(e):
                 await event.edit(str(e))
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
-            
-            
+
+
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.bspam"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.bspam"))
 @wdk.on(events.NewMessage(incoming=True, pattern=r"\.bspam"))
@@ -403,7 +398,9 @@ async def _(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.bspam"))
 async def spam(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗦𝗽𝗮𝗺\n\nCommand:\n\n.bspam <count> <message to spam>\n\n.bspam <count> <reply to a message>\n\nCount must be a integer."
-    error = "bspam Module can only be used till 100 count. For bigger spams use Bigbspam."
+    error = (
+        "bspam Module can only be used till 100 count. For bigger spams use Bigbspam."
+    )
     if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
@@ -526,7 +523,6 @@ async def spam(e):
             await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.fuk"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.fuk"))
 @wdk.on(events.NewMessage(incoming=True, pattern=r"\.fuk"))
@@ -573,8 +569,8 @@ async def spam(e):
                     await asyncio.sleep(0.3)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
-            
-            
+
+
 @idk.on(events.NewMessage(incoming=True))
 @ydk.on(events.NewMessage(incoming=True))
 @wdk.on(events.NewMessage(incoming=True))
@@ -598,8 +594,8 @@ async def _(event):
             message="""{}""".format(random.choice(HFUK)),
             reply_to=event.message.id,
         )
-        
-        
+
+
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.hardcore"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.hardcore"))
 @wdk.on(events.NewMessage(incoming=True, pattern=r"\.hardcore"))
@@ -640,8 +636,8 @@ async def _(e):
             await e.reply(text, parse_mode=None, link_preview=None)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
-            
-            
+
+
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.dhardcore"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.dhardcore"))
 @wdk.on(events.NewMessage(incoming=True, pattern=r"\.dhardcore"))
@@ -684,8 +680,7 @@ async def _(e):
             await e.reply(text, parse_mode=None, link_preview=None)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
-            
-            
+
 
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.bot"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.bot"))
@@ -705,10 +700,10 @@ async def ping(e):
         end = datetime.now()
         ms = (end - start).microseconds / 1000
         await event.edit(
-            f"‌‌‎ __  __ _     ___  \n|  \/  | |   / _ \ \n| |\/| | |  | | | |\n| |  | | |__| |_| |\n|_|  |_|_____\___/!\n\n`{ms}` 𝗺𝘀\n\n 𝑴𝑳𝑶 𝑺𝑷𝑨𝑴𝑩𝑶𝑻 𝑶𝑵 𝑭𝑰𝑹𝑬 🔥"
+            f"‌‌‎ __  __ _     ___  \n|  \\/  | |   / _ \\ \n| |\\/| | |  | | | |\n| |  | | |__| |_| |\n|_|  |_|_____\\___/!\n\n`{ms}` 𝗺𝘀\n\n 𝑴𝑳𝑶 𝑺𝑷𝑨𝑴𝑩𝑶𝑻 𝑶𝑵 𝑭𝑰𝑹𝑬 🔥"
         )
-        
-        
+
+
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.reboot"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.reboot"))
 @wdk.on(events.NewMessage(incoming=True, pattern=r"\.reboot"))
@@ -781,7 +776,7 @@ async def help(e):
     if e.sender_id in SMEX_USERS:
         text = "𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀\n\n𝙐𝙩𝙞𝙡𝙨 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n.bot\n.reboot\n\n𝙐𝙨𝙚𝙧𝙗𝙤𝙩 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n.bio\n.join\n.pjoin\n.bleave\n\n𝙎𝙥𝙖𝙢 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n.bspam\n.delaybspam\n.bigbspam\n.fuk\n.hardcore\n.dhardcore\n\n\nFor more help regarding usage of plugins type plugins name"
         await e.reply(text, parse_mode=None, link_preview=None)
-        
+
 
 text = """
  ███╗░░░███╗██╗░░░░░░█████╗░
