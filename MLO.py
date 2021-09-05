@@ -6,10 +6,15 @@ from datetime import datetime
 
 import telethon.utils
 from telethon import TelegramClient, events
+from telethon.errors import (
+    ChannelInvalidError,
+    ChannelPrivateError,
+    ChannelPublicGroupNaError,
+)
 from telethon.sessions import StringSession
 from telethon.tl import functions, types
-from telethon.tl.functions.channels import LeaveChannelRequest
-from telethon.tl.functions.messages import ImportChatInviteRequest
+from telethon.tl.functions.channels import GetFullChannelRequest, LeaveChannelRequest
+from telethon.tl.functions.messages import GetFullChatRequest, ImportChatInviteRequest
 
 from Config import (
     API_HASH,
@@ -538,16 +543,16 @@ async def spam(e):
     if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
-        MLO = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        Lallan = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         await e.get_reply_message()
-        if len(MLO) == 2:
-            message = str(MLO[1])
+        if len(Lallan) == 2:
+            message = str(Lallan[1])
             print(message)
             a = await e.client.get_entity(message)
             g = a.id
             c = a.first_name
             username = f"[{c}](tg://user?id={g})"
-            counter = int(MLO[0])
+            counter = int(Lallan[0])
             for _ in range(counter):
                 reply = random.choice(FUK)
                 caption = f"{username} {reply}"
@@ -559,7 +564,7 @@ async def spam(e):
             b = await e.client.get_entity(a.sender_id)
             g = b.id
             c = b.first_name
-            counter = int(MLO[0])
+            counter = int(Lallan[0])
             username = f"[{c}](tg://user?id={g})"
             for _ in range(counter):
                 reply = random.choice(FUK)
