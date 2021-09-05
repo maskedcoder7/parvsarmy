@@ -6,15 +6,10 @@ from datetime import datetime
 
 import telethon.utils
 from telethon import TelegramClient, events
-from telethon.errors import (
-    ChannelInvalidError,
-    ChannelPrivateError,
-    ChannelPublicGroupNaError,
-)
 from telethon.sessions import StringSession
 from telethon.tl import functions, types
-from telethon.tl.functions.channels import GetFullChannelRequest, LeaveChannelRequest
-from telethon.tl.functions.messages import GetFullChatRequest, ImportChatInviteRequest
+from telethon.tl.functions.channels import LeaveChannelRequest
+from telethon.tl.functions.messages import ImportChatInviteRequest
 
 from Config import (
     API_HASH,
