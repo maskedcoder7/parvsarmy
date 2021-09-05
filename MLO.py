@@ -26,7 +26,7 @@ from Config import (
     STRING10,
     SUDO,
 )
-from Utils import FUK, HFUK
+from Utils import RAID, HFUK
 
 a = API_ID
 b = API_HASH
@@ -549,7 +549,7 @@ async def spam(e):
             username = f"[{c}](tg://user?id={g})"
             counter = int(Lallan[0])
             for _ in range(counter):
-                reply = random.choice(FUK)
+                reply = random.choice(RAID)
                 caption = f"{username} {reply}"
                 async with e.client.action(e.chat_id, "typing"):
                     await e.client.send_message(e.chat_id, caption)
@@ -562,7 +562,7 @@ async def spam(e):
             counter = int(Lallan[0])
             username = f"[{c}](tg://user?id={g})"
             for _ in range(counter):
-                reply = random.choice(FUK)
+                reply = random.choice(RAID)
                 caption = f"{username} {reply}"
                 async with e.client.action(e.chat_id, "typing"):
                     await e.client.send_message(e.chat_id, caption)
