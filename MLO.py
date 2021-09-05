@@ -10,7 +10,6 @@ from telethon.sessions import StringSession
 from telethon.tl import functions, types
 from telethon.tl.functions.channels import LeaveChannelRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest
-from Utils import FUK, HFUK
 
 from Config import (
     API_HASH,
@@ -27,6 +26,7 @@ from Config import (
     STRING10,
     SUDO,
 )
+from Utils import FUK, HFUK
 
 a = API_ID
 b = API_HASH
