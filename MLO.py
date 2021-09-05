@@ -523,7 +523,7 @@ async def spam(e):
             await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.fuk"))
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.fuk"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.fuk"))
 @wdk.on(events.NewMessage(incoming=True, pattern=r"\.fuk"))
 @hdk.on(events.NewMessage(incoming=True, pattern=r"\.fuk"))
