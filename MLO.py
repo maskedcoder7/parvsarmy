@@ -26,7 +26,7 @@ from Config import (
     STRING10,
     SUDO,
 )
-from Utils import RAID, HFUK
+from Utils import HFUK, RAID
 
 a = API_ID
 b = API_HASH
