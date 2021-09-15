@@ -1,6 +1,6 @@
 {
-  "name": "MLO SPAMBOT",
-  "description": "POWERFUL SPAMBOT, MANAGED BY THE DEVELOPERS OF MLO",
+  "name": "parvs army",
+  "description": "Private h sir",
   "logo": ".................",
   "keywords": [
     "spambot",
@@ -10,12 +10,12 @@
     "env": {      
       "API_HASH": {
         "description": "Api Hash",
-        "value": "",
+        "value": "dbae78eded6fc5d0518221b8c35f9a68",
         "required": true
       },
       "API_ID": {
         "description": "Telethon String Session",
-        "value": "",
+        "value": "2989825",
         "required": true
       },
       "STRING": {
@@ -70,7 +70,7 @@
       },
         "SUDO": {
         "description": "Sudo Users Id",
-        "value": "",
+        "value": "1406657231 1777429990  1906695805 1825975160",
         "required": true
       }
   },
